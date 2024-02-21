@@ -13,10 +13,12 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[# bg-[#F7F8F8]]">
-    <header class="container mx-auto mt-8">
-      <nav>
-        <div class="navbar bg-base-100 justify-center items-center">
+  <body class="bg-[#F7F8F8]">
+    <header class="container mx-auto">
+      <nav class="bg-[#F7F8F8]">
+        <div
+          class="navbar bg-base-100 bg-[#F7F8F8] justify-center items-center"
+        >
           <div class="navbar-start">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -78,7 +80,7 @@
               journeys.
             </p>
             <button class="btn font-bold text-black bg-[#1DD100]">
-              Buy Tickets
+              <a href="#main-div">Buy Tickets </a>
             </button>
           </div>
         </div>
@@ -88,7 +90,7 @@
       <h1 class="text-5xl font-extrabold mt-5 text-center">
         Best Offer For You
       </h1>
-      <section class="container mx-auto flex gap-5 justify-between mt-5">
+      <section class="container mx-auto flex gap-5 justify-between mt-16">
         <div class="bg-[#FFBF0F] flex flex-1 rounded-[20px]">
           <div class="flex flex-col flex-1 text-center justify-center">
             <h1 class="font-extrabold text-4xl">15% OFF</h1>
@@ -114,7 +116,7 @@
           </div>
         </div>
       </section>
-      <div class="w-full text-center my-5">
+      <div class="w-full text-center my-16">
         <button
           class="btn border-[#1DD100] font-bold text-[#1DD100] bg-[#c6f3bf]"
         >
@@ -125,7 +127,8 @@
 
     <!-- ticket booking section -->
     <section
-      class="h-screen border-t-[3px] rounded-t-[40px] border-t-[#1DD100] bg-[#F7F8F8]"
+      id="main-div"
+      class="container mx-auto border-t-[3px] border-b-[3px] rounded-b-[40px] rounded-t-[40px] border-t-[#1DD100] mb-10 mt-20"
     >
       <div class="mt-10">
         <h1 class="text-4xl font-bold text-center my-5">Hanif Paribahan</h1>
@@ -193,7 +196,7 @@
         </div>
       </div>
       <!-- main seat big div -->
-      <div class="bg-white flex flex-1 rounded-[20px] my-5 mx-11 h-screen">
+      <div class="bg-white flex flex-1 rounded-[20px] my-5 mx-11">
         <!-- left side div for only seat -->
         <div class="m-5 px-5 w-[65%] border-r-2 border-dashed">
           <div class="border-b-2 border-dashed py-4">
@@ -256,41 +259,82 @@
           </div>
           <!-- full right side all info div -->
           <div>
-            <div class="overflow-x-auto">
-              <table class="table">
-                <!-- head -->
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Seat</th>
-                    <th>class</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- row 1 -->
-                  <tr>
-                    <th>1</th>
-                    <td>Cy Ganderton</td>
-                    <td>Quality Control Specialist</td>
-                    <td>Blue</td>
-                  </tr>
-                  <!-- row 2 -->
-                  <tr>
-                    <th>2</th>
-                    <td>Hart Hagerty</td>
-                    <td>Desktop Support Technician</td>
-                    <td>Purple</td>
-                  </tr>
-                  <!-- row 3 -->
-                  <tr>
-                    <th>3</th>
-                    <td>Brice Swyre</td>
-                    <td>Tax Accountant</td>
-                    <td>Red</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="bg-[#F7F8F8] rounded-md my-5">
+              <div class="flex justify-between py-4 border-b-2 border-dashed">
+                <h3 class="py-2 px-4 rounded-md">Seat 0</h3>
+                <h3 class="py-2 px-4 rounded-md">Class</h3>
+                <h3 class="py-2 px-4 rounded-md">Price</h3>
+              </div>
+              <!-- empty div to append  seat and price -->
+              <div class="px-4">
+                <h1>append here</h1>
+              </div>
+
+              <div class="px-4 rounded-md my-5">
+                <div class="flex justify-between py-4">
+                  <div class="">
+                    <h3>Total Price</h3>
+                  </div>
+                  <div class="">
+                    <h3>BDT 00</h3>
+                  </div>
+                </div>
+                <!-- coupn applied -->
+                <div class="w-full flex">
+                  <input
+                    class="border-2 py-2 px-4 rounded-md bg-white mr-0 w-full"
+                    placeholder="Have any coupon?"
+                    type="text"
+                  />
+                  <button
+                    class="py-2 px-4 bg-[#c6f3bf] border-2 rounded-md border-[#1DD100]"
+                  >
+                    Apply
+                  </button>
+                </div>
+                <div class="flex justify-between py-4">
+                  <div class="">
+                    <h3>Grand Total</h3>
+                  </div>
+                  <div class="">
+                    <h3>BDT 00</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- form div -->
+            <div>
+              <div class="w-full my-2 py-4">
+                <h1>Passenger Name*</h1>
+                <input
+                  class="border-2 py-2 px-4 rounded-md bg-white mr-0 w-full"
+                  placeholder="Enter Your Name"
+                  type="text"
+                />
+              </div>
+              <div class="w-full my-2 py-4">
+                <h1>Phone Number*</h1>
+                <input
+                  class="border-2 py-2 px-4 rounded-md bg-white mr-0 w-full"
+                  placeholder="Enter You Phone Number"
+                  type="text"
+                />
+              </div>
+              <div class="w-full my-2 py-4">
+                <h1>Email Id</h1>
+                <input
+                  class="border-2 py-2 px-4 rounded-md bg-white mr-0 w-full"
+                  placeholder="Enter Your Email"
+                  type="text"
+                />
+              </div>
+              <button class="text-white btn btn-block rounded-md bg-[#1DD100]">
+                Confirm Purches
+              </button>
+              <div class="justify-between flex">
+                <div><a href="">terms & conditions</a></div>
+                <div><a href="">refund policy</a></div>
+              </div>
             </div>
           </div>
         </div>
