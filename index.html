@@ -3,9 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Practice</title>
+    <title>Smart Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>Goood Mornign</h1>
+  <body class="bg-[# bg-[#F7F8F8]]">
+    <header class="container mx-auto mt-8">
+      <nav>
+        <div class="navbar bg-base-100 justify-center items-center">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+            </div>
+            <a class="btn btn-ghost text-center text-4xl">Hanif</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul
+              class="menu menu-horizontal justify-center items-center px-1 gap-8"
+            >
+              <li><a class="">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn font-bold text-[#1DD100] bg-[#c6f3bf]"
+              >Bus <span><img src="images/bus-icon.png" alt="" /></span
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- banner section -->
+    <main>
+      <!-- banner section -->
+      <div
+        class="hero container mx-auto mt-4 h-[560px] bg-center rounded-[40px]"
+        style="background-image: url(images/banner.png)"
+      >
+        <div class="hero-overlay bg-opacity-60 rounded-[40px]"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-lg">
+            <h1 class="mb-5 text-5xl font-bold text-white">
+              Have A Nice Journey
+            </h1>
+            <h1 class="mb-5 text-4xl font-bold text-[#1DD100]">
+              Hanif Paribahan
+            </h1>
+            <p class="mb-5">
+              The journey is always full of fun for me. From my childhood, I
+              loved traveling a lot and that’s why I have experienced lots of
+              journeys.
+            </p>
+            <button class="btn font-bold text-black bg-[#1DD100]">
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- offer section -->
+      <h1 class="text-5xl font-extrabold mt-5 text-center">
+        Best Offer For You
+      </h1>
+      <section class="container mx-auto flex gap-5 justify-between mt-5">
+        <div class="bg-[#FFBF0F] flex flex-1 rounded-[20px]">
+          <div class="flex flex-col flex-1 text-center justify-center">
+            <h1 class="font-extrabold text-4xl">15% OFF</h1>
+            <p class="font-bold">on your next purches</p>
+            <p>use by february 2024</p>
+          </div>
+          <img src="images/cupon-devider.png" alt="" />
+          <div class="flex flex-col flex-1 text-center justify-center">
+            <h1 class="font-extrabold text-xl">NEW15</h1>
+            <p>coupon code</p>
+          </div>
+        </div>
+        <div class="bg-[#F78C9C] flex flex-1 rounded-[20px]">
+          <div class="flex flex-col flex-1 text-center justify-center">
+            <h1 class="font-extrabold text-4xl">20% OFF</h1>
+            <p class="font-bold">on your next purches</p>
+            <p>use by february 2024</p>
+          </div>
+          <img src="images/cupon-devider.png" alt="" />
+          <div class="flex flex-col flex-1 text-center justify-center">
+            <h1 class="font-extrabold text-xl">Couple 20</h1>
+            <p>coupon code</p>
+          </div>
+        </div>
+      </section>
+      <div class="w-full text-center my-5">
+        <button
+          class="btn border-[#1DD100] font-bold text-[#1DD100] bg-[#c6f3bf]"
+        >
+          See More Offers
+        </button>
+      </div>
+    </main>
+
+    <!-- ticket booking section -->
+    <section
+      class="h-screen border-t-[3px] rounded-t-[40px] border-t-[#1DD100] bg-[#F7F8F8]"
+    >
+      <div class="mt-10">
+        <h1 class="text-4xl font-bold text-center my-5">Hanif Paribahan</h1>
+        <p class="text-xl text-center">
+          There are so many things that I have enjoyed on this journey. I have
+          enjoyed music, the outside <br />
+          beauty and meet with some awesome friendly peoples.
+        </p>
+      </div>
+      <!-- route and fare -->
+
+      <div class="bg-white flex flex-1 rounded-[20px] my-5 mx-11">
+        <div class="w-[80%]">
+          <div class="flex justify-between flex-1 m-5 px-5">
+            <div class="flex gap-4">
+              <div>
+                <img src="images/bus-logo.png" alt="" />
+              </div>
+
+              <div>
+                <h1>Hanif Paribahan</h1>
+                <p>Coach-009-WEB ! AC_Business</p>
+              </div>
+            </div>
+            <div class="">
+              <button
+                class="btn border-[#1DD100] font-bold text-[#1DD100] bg-[#c6f3bf]"
+              >
+                <img src="images/seat-green.png" alt="" />
+                8 seats left
+              </button>
+            </div>
+          </div>
+          <!-- ticket fare and info div -->
+
+          <div class="m-5 px-5 bg-[#F7F8F8] rounded-[20px]">
+            <div class="flex justify-between border-b-2 border-dashed py-4">
+              <h3>Route</h3>
+              <h3>Dhaka - Chittagong</h3>
+            </div>
+            <div class="flex justify-between border-b-2 border-dashed py-4">
+              <h3>Departure Time</h3>
+              <h3>10.00 PM</h3>
+            </div>
+            <div class="flex justify-between py-4">
+              <h3 class="bg-[#3f424717] py-2 px-4 rounded-md">
+                Bording Point - Mohakhali
+              </h3>
+              <h3 class="bg-[#3f424717] py-2 px-4 rounded-md">
+                Dropping Point - Chittagong
+              </h3>
+              <h3 class="bg-[#3f424717] py-2 px-4 rounded-md">
+                Est. Time : 8 Hours
+              </h3>
+            </div>
+          </div>
+        </div>
+        <img class="h-80" src="images/info-devider.png" alt="" />
+        <div
+          class="flex flex-col items-center text-center justify-center w-[20%]"
+        >
+          <img class="w-[60px] items-center" src="images/fare.png" alt="" />
+          <h1 class="font-extrabold text-xl">550 TAKA</h1>
+          <p>Per Seat</p>
+        </div>
+      </div>
+      <!-- main seat big div -->
+      <div class="bg-white flex flex-1 rounded-[20px] my-5 mx-11 h-screen">
+        <!-- left side div for only seat -->
+        <div class="m-5 px-5 w-[65%] border-r-2 border-dashed">
+          <div class="border-b-2 border-dashed py-4">
+            <h3 class="font-bold">select Your Seat</h3>
+          </div>
+          <div class="flex justify-between border-b-2 border-dashed py-4">
+            <div class="flex">
+              <img src="images/seat-gray.png" alt="" />
+              <h3>available</h3>
+            </div>
+            <div class="flex">
+              <img src="images/seat-green-filled.png" alt="" />
+              <h3>selected</h3>
+            </div>
+          </div>
+
+          <!-- for full 1ST  row -->
+          <div class="flex justify-between mt-5">
+            <!-- this div for left row -->
+            <div class="flex gap-12">
+              <div class="items-center justify-center text-center inline-block">
+                <h1 class="font-semibold pt-3 pl-3">A</h1>
+              </div>
+
+              <button class="btn py-4 px-10">A1</button>
+              <button class="btn py-4 px-10">A2</button>
+            </div>
+            <!-- this div for right row -->
+            <div class="flex gap-12">
+              <button class="btn py-4 px-10">A3</button>
+              <button class="btn py-4 px-10">A4</button>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mt-5">
+              <!-- this div for left row -->
+              <div class="flex gap-12">
+                <div
+                  class="items-center justify-center text-center inline-block"
+                >
+                  <h1 class="font-semibold pt-3 pl-3">B</h1>
+                </div>
+
+                <button class="btn py-4 px-10">B1</button>
+                <button class="btn py-4 px-10">B2</button>
+              </div>
+              <!-- this div for right row -->
+              <div class="flex gap-12">
+                <button class="btn py-4 px-10">B3</button>
+                <button class="btn py-4 px-10">B4</button>
+              </div>
+            </div>
+          </div>
+          <!-- for full 2ND  row -->
+        </div>
+        <!-- right side div for info about seat -->
+        <div class="m-5 px-5 w-[500px]">
+          <div class="border-b-2 border-dashed py-4 w-full">
+            <h3 class="font-bold">select Your Seat</h3>
+          </div>
+          <!-- full right side all info div -->
+          <div>
+            <div class="overflow-x-auto">
+              <table class="table">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Seat</th>
+                    <th>class</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- row 1 -->
+                  <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
+                  </tr>
+                  <!-- row 2 -->
+                  <tr>
+                    <th>2</th>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
+                  </tr>
+                  <!-- row 3 -->
+                  <tr>
+                    <th>3</th>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
