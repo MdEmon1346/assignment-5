@@ -158,7 +158,7 @@
                 class="btn border-[#1DD100] font-bold text-[#1DD100] bg-[#c6f3bf]"
               >
                 <img src="images/seat-green.png" alt="" />
-                8 seats left
+                <span id="baki-seat">8</span> seats left
               </button>
             </div>
           </div>
@@ -191,7 +191,9 @@
           class="flex flex-col items-center text-center justify-center w-[20%]"
         >
           <img class="w-[60px] items-center" src="images/fare.png" alt="" />
-          <h1 class="font-extrabold text-xl">550 TAKA</h1>
+          <h1 class="font-extrabold text-xl">
+            <span id="seat-dam">550</span> TAKA
+          </h1>
           <p>Per Seat</p>
         </div>
       </div>
@@ -203,11 +205,11 @@
             <h3 class="font-bold">select Your Seat</h3>
           </div>
           <div class="flex justify-between border-b-2 border-dashed py-4">
-            <div class="flex">
+            <div class="flex gap-3">
               <img src="images/seat-gray.png" alt="" />
               <h3>available</h3>
             </div>
-            <div class="flex">
+            <div class="flex gap-3">
               <img src="images/seat-green-filled.png" alt="" />
               <h3>selected</h3>
             </div>
@@ -221,13 +223,13 @@
                 <h1 class="font-semibold pt-3 pl-3">A</h1>
               </div>
 
-              <button class="btn py-4 px-10">A1</button>
-              <button class="btn py-4 px-10">A2</button>
+              <button class="btn btn-seat py-4 px-10">A1</button>
+              <button class="btn btn-seat py-4 px-10">A2</button>
             </div>
             <!-- this div for right row -->
             <div class="flex gap-12">
-              <button class="btn py-4 px-10">A3</button>
-              <button class="btn py-4 px-10">A4</button>
+              <button class="btn btn-seat py-4 px-10">A3</button>
+              <button class="btn btn-seat py-4 px-10">A4</button>
             </div>
           </div>
           <div>
@@ -240,13 +242,13 @@
                   <h1 class="font-semibold pt-3 pl-3">B</h1>
                 </div>
 
-                <button class="btn py-4 px-10">B1</button>
-                <button class="btn py-4 px-10">B2</button>
+                <button class="btn btn-seat py-4 px-10">B1</button>
+                <button class="btn btn-seat py-4 px-10">B2</button>
               </div>
               <!-- this div for right row -->
               <div class="flex gap-12">
-                <button class="btn py-4 px-10">B3</button>
-                <button class="btn py-4 px-10">B4</button>
+                <button class="btn btn-seat py-4 px-10">B3</button>
+                <button class="btn btn-seat py-4 px-10">B4</button>
               </div>
             </div>
           </div>
@@ -261,14 +263,14 @@
           <div>
             <div class="bg-[#F7F8F8] rounded-md my-5">
               <div class="flex justify-between py-4 border-b-2 border-dashed">
-                <h3 class="py-2 px-4 rounded-md">Seat 0</h3>
+                <h3 class="py-2 px-4 rounded-md">
+                  Seat <span id="booked-seat">0</span>
+                </h3>
                 <h3 class="py-2 px-4 rounded-md">Class</h3>
                 <h3 class="py-2 px-4 rounded-md">Price</h3>
               </div>
               <!-- empty div to append  seat and price -->
-              <div class="px-4">
-                <h1>append here</h1>
-              </div>
+              <div id="empty-div" class="px-4"></div>
 
               <div class="px-4 rounded-md my-5">
                 <div class="flex justify-between py-4">
@@ -340,5 +342,7 @@
         </div>
       </div>
     </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
