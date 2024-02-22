@@ -20,6 +20,9 @@ for (btn of allSeat) {
       return;
     }
 
+    event.target.classList.add("bg-[#1DD100]");
+    event.target.classList.add("text-white");
+
     const selectEmptyDiv = document.getElementById("empty-div");
     selectEmptyDiv.classList.add("border-b-2");
     const newDiv = document.createElement("div");
