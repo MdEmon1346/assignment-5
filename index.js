@@ -1,13 +1,8 @@
-// any string to Number
-
 function stToNum(num) {
   const number = document.getElementById(num).innerText;
   const convertNum = parseInt(number);
   return convertNum;
 }
-const seatBook = stToNum("booked-seat");
-const bakiSeat = stToNum("baki-seat");
-const Seat_dam = stToNum("seat-dam");
 
 const allSeat = document.getElementsByClassName("btn-seat");
 
@@ -15,11 +10,27 @@ for (btn of allSeat) {
   btn.addEventListener("click", function (event) {
     const seatNum = event.target.innerText;
 
-    const selectEmptyDiv = document.getElementById("empty-div");
+    const seatBook = stToNum("booked-seat");
+    const remainSeat = stToNum("remain-seat");
+    const Seat_dam = stToNum("seat-dam");
+    const grandTotalPrice = stToNum("grandTotalPrice");
 
+    if (seatBook + 1 > 4) {
+      alert("You Can't Purchase More then 4 ticket at a time");
+      return;
+    }
+
+    const selectEmptyDiv = document.getElementById("empty-div");
+    selectEmptyDiv.classList.add("border-b-2");
     const newDiv = document.createElement("div");
     newDiv.classList.add("flex");
     newDiv.classList.add("justify-between");
+
+    const seatLeft = remainSeat;
+    document.getElementById("remain-seat").innerText = seatLeft - 1;
+    const seatCount = seatBook;
+    document.getElementById("booked-seat").innerText = seatCount + 1;
+
     const seat = document.createElement("p");
     const sClass = document.createElement("p");
     const price = document.createElement("p");
@@ -33,5 +44,34 @@ for (btn of allSeat) {
     newDiv.appendChild(price);
 
     selectEmptyDiv.appendChild(newDiv);
+    updateTotalCost(Seat_dam);
+    updateGrandTotal();
   });
+}
+
+function updateGrandTotal(status) {
+  const totalCost = stToNum("total-price");
+  if (status == undefined) {
+    document.getElementById("grandTotalPrice").innerText = totalCost;
+  } else {
+    const couponCode = document.getElementById("coupon").value;
+    console.log(couponCode);
+    if (couponCode == "NEW15") {
+      const DisPrice = totalCost * 0.15;
+      document.getElementById("grandTotalPrice").innerText =
+        totalCost - DisPrice;
+    } else if (couponCode == "Couple 20") {
+      const DisPrice = totalCost * 0.2;
+      document.getElementById("grandTotalPrice").innerText =
+        totalCost - DisPrice;
+    } else {
+      alert("Pleae Enter a valid coupon");
+    }
+  }
+}
+
+function updateTotalCost(value) {
+  const totalCost = stToNum("total-price");
+  const sum = totalCost + value;
+  document.getElementById("total-price").innerText = sum;
 }
