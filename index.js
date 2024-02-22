@@ -58,15 +58,22 @@ function updateGrandTotal(status) {
     document.getElementById("grandTotalPrice").innerText = totalCost;
   } else {
     const couponCode = document.getElementById("coupon").value;
+    const hideCouponCode = document.getElementById("coupon");
+    const applyBtn = document.getElementById("apply-btn");
+
     console.log(couponCode);
     if (couponCode == "NEW15") {
       const DisPrice = totalCost * 0.15;
       document.getElementById("grandTotalPrice").innerText =
         totalCost - DisPrice;
+      hideCouponCode.classList.add("hidden");
+      applyBtn.classList.add("hidden");
     } else if (couponCode == "Couple 20") {
       const DisPrice = totalCost * 0.2;
       document.getElementById("grandTotalPrice").innerText =
         totalCost - DisPrice;
+      hideCouponCode.classList.add("hidden");
+      applyBtn.classList.add("hidden");
     } else {
       alert("Pleae Enter a valid coupon");
     }

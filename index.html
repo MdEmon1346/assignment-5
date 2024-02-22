@@ -79,7 +79,10 @@
               loved traveling a lot and that’s why I have experienced lots of
               journeys.
             </p>
-            <button class="btn font-bold text-black bg-[#1DD100]">
+
+            <button
+              class="btn mt-4 no-animation rounded-md hover:bg-[#1DD100] text-white bg-[#20AE5C]"
+            >
               <a href="#main-div">Buy Tickets </a>
             </button>
           </div>
@@ -232,7 +235,7 @@
               <button class="btn btn-seat py-4 px-10">A4</button>
             </div>
           </div>
-          <!-- copied start -->
+
           <div class="flex justify-between mt-5">
             <!-- this div for left row -->
             <div class="flex gap-12">
@@ -361,7 +364,7 @@
               <button class="btn btn-seat py-4 px-10">I4</button>
             </div>
           </div>
-          <!-- copied end -->
+
           <div>
             <div class="flex justify-between mt-5">
               <!-- this div for left row -->
@@ -394,7 +397,12 @@
             <div class="bg-[#F7F8F8] rounded-md my-5">
               <div class="flex justify-between py-4 border-b-2 border-dashed">
                 <h3 class="py-2 px-4 rounded-md">
-                  Seat <span id="booked-seat">0</span>
+                  Seat
+                  <span
+                    id="booked-seat"
+                    class="bg-[#1DD100] px-2 rounded-2xl text-white"
+                    >0</span
+                  >
                 </h3>
                 <h3 class="py-2 px-4 rounded-md">Class</h3>
                 <h3 class="py-2 px-4 rounded-md">Price</h3>
@@ -421,8 +429,8 @@
                   />
                   <button
                     onclick="updateGrandTotal(status)"
-                    id="updateGrandTotal('apply-btn')"
-                    class="py-2 px-4 bg-[#c6f3bf] border-2 rounded-md border-[#1DD100] apply-btn"
+                    id="apply-btn"
+                    class="py-2 px-4 bg-[#c6f3bf] hover:bg-[#20AE5C] hover:text-white border-2 rounded-md border-[#1DD100] apply-btn"
                   >
                     Apply
                   </button>
@@ -464,7 +472,9 @@
                 />
               </div>
 
-              <button class="btn no-animation text-white w-full bg-[#1DD100]">
+              <button
+                class="btn no-animation text-white w-full bg-[#1DD100] hover:bg-[#20AE5C]"
+              >
                 <a href="success.html">Confirm Purchase</a>
               </button>
               <div class="justify-between flex">
